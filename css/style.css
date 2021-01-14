@@ -237,15 +237,15 @@ header .content {
 nav ul {
     list-style: none;
     padding: 0;
-    width: fit-content;
+    width: 80%;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 nav ul li {
     display: inline-block;
-    width: 80%;
-    max-width: 400px;
-    margin: 10px 10%;
+    width: 100%;
+    margin: 10px 0;
     padding: 10px;
     border: 2px solid var(--textcolor);
     border-radius: 80px;
@@ -253,6 +253,7 @@ nav ul li {
     font-weight: bold;
     cursor: pointer
 }
+
     
 
 
