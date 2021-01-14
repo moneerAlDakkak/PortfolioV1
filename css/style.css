@@ -52,6 +52,11 @@ main {
     overflow: hidden;
 }
 
+
+.fa-1-5x {
+    font-size: 1.5em;
+}
+
 @font-face {
     font-family: poppins;
     src: url('../fonts/poppins.ttf')
@@ -94,10 +99,6 @@ main {
     display: none
 }
 
-
-.fa-1-5x {
-    font-size: 8em;
-}
 
 
 
