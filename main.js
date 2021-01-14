@@ -37,3 +37,18 @@ function backFunction(aButton) {
         document.body.classList = [];
     }
 }
+
+
+document.querySelector('.logo').ondblclick = function () {
+
+    if (document.body.getAttribute('id') == 'light-mode') {
+
+        document.body.setAttribute('id', 'dark-mode');
+
+    } else if (document.body.getAttribute('id') == 'dark-mode') {
+
+        document.body.setAttribute('id', 'light-mode');
+
+    }
+
+}
