@@ -7,21 +7,36 @@
 
 
 body {
-    --maincolor: #fff;
-    --textcolor: #38464f;
-    --accentcolor: #307ac3;
-    --bgBackground: url("../images/spikes.png");
-    --tintgradient: linear-gradient(180deg, rgba(255, 255, 255, 0.9953816406918268) 54%, rgba(255, 255, 255, 0.3949840851943859) 100%);
+    
     background: var(--bgBackground) center center repeat;
     margin: 0;
     padding: 0;
     display: flex;
     max-height: 100vh;
+    height: 100vh;
     max-width: 100vw;
     color: var(--textcolor);
     font-family: poppins;
     overflow-y: hidden;
+    transition: background 2s ease-out;
 }
+
+#light-mode {
+    --maincolor: #fff;
+    --textcolor: #38464f;
+    --accentcolor: #307ac3;
+    --bgBackground: url("../images/spikes.png");
+    --tintgradient:  linear-gradient(180deg, rgba(255,255,255,0.9248074229691877) 53%, rgba(255,255,255,0.8323704481792717) 100%);
+}
+
+#dark-mode {
+    --maincolor: #1b2c47;
+    --textcolor: #fff;
+    --accentcolor: #ffe264;
+    --bgBackground: url("../images/spikesdark.png");
+    --tintgradient:  linear-gradient(180deg, rgba(27,44,71,0.8295693277310925) 57%, rgba(27,44,71,0.5886729691876751) 100%); 
+}
+
 
 h1 {
     text-align: center;
@@ -52,7 +67,7 @@ main {
 
 
 
-/* 2) Me screen :
+/* 2) About Me screen :
 */
 
 
@@ -64,6 +79,7 @@ main {
     height: 100%;
     overflow: hidden;
     padding: 10px;
+    
 }
 
 .about-me-layer img {
@@ -103,14 +119,12 @@ main {
 
 
 
-
-
 /* 4) The layer that holds all items :
 */
 
 
 .items-layer {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -165,7 +179,7 @@ header .content {
     border-radius: 10px;
     font: bold 1.2em/54px rancho, cursive;
     padding: 0 12px;
-    color: white;
+    color: var(--maincolor);
     background-color: var(--accentcolor);
 }
 
@@ -199,7 +213,7 @@ header .content {
     position: absolute;
     top: 0;
     right: -200px;
-    transition: right 2s ease-out
+    transition: right 4s ease-out
 }
 
 .follow i {
