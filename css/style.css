@@ -96,7 +96,7 @@ main {
 
 
 .fa-1-5x {
-    font-size: 1.5em;
+    font-size: 8m;
 }
 
 
@@ -112,8 +112,7 @@ main {
     height: 100%;
     background: var(--tintgradient);
     opacity: .7;
-    transition: all 2s ease-out,
-                background 2s linear;
+    transition: all 2s ease-in-out
 }
 
 
