@@ -17,7 +17,6 @@ body {
     max-width: 100vw;
     color: var(--textcolor);
     font-family: poppins;
-    overflow-y: hidden;
     transition: background 2s ease-out;
 }
 
