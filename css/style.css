@@ -30,7 +30,7 @@ main {
     position: relative;
     width: 80%;
     min-width: 400px;
-    max-height:  100vh;
+    height:  100vh;
     margin: 0 auto ;
     overflow-x: hidden;
 }
