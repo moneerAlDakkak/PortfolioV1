@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,28 +7,33 @@
     <title>Moneer Al-Dakkak</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/all.min.css"/>
+
 </head>
 
 <body id="light-mode">
-    
+
     <main>
-        
+
         <button class="back-button">&lt;</button>
 
-        <div style="overflow: hidden; position: relative; height: 100%">
-            <!-- 1st layer : about-me-screen -->
+        <div class="first-of-two">
+
+            <section class="me-layer"> <h6>.</h6>
             
-            <section class="about-me-layer"> <h6>.</h6>
-                
-                <img src="images/me2.jpg" alt="me">
-                <p>
-                    My name is Moneer Al-Dakkak.
-                    <br> I am 19 years old.
-                    <br> from Damascus, Syria.
-                    <br> I am a computer engineering student
-                    <br> and a front-end web developer.
-                    <br> Hope you like my work !
-                </p>
+                <div class="fixed-img">
+                    <img src="images/me.jpg" alt="me">
+                </div>
+                    
+
+                    <p>
+                        My name is Moneer Al-Dakkak.
+                        <br> I am 19 years old.
+                        <br> from Damascus, Syria.
+                        <br> I am a computer engineering student
+                        <br> and a front-end web developer.
+                        <br> Hope you like my work !
+                    </p>
+
 
                 <div class="items-layer">
                 
@@ -45,12 +50,47 @@
                             </div>
                             
                             
-                            <span class="follow">
-                              <i class="fab fa-facebook fa-1-5x" onclick="location.href = 'https://www.facebook.com/IamMoneer'"></i>
-                              <i class="fab fa-telegram fa-1-5x"></i>
-                              <i class="fab fa-linkedin fa-1-5x"></i>
-                              <i class="fab fa-instagram fa-1-5x"></i>
-                            </span>
+                            <div class="follow">
+                                
+                                <a href="https://www.facebook.com/IamMoneer" target="_blank">
+                                
+                                <span class="fa-stack">
+
+                                <i class="fas fa-circle fa-stack-2x"></i>
+
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                                </a>
+                                
+                                <a href="https://t.me/Iammoneer" target="_blank">
+                                <span class="fa-stack">
+
+                                <i class="fas fa-circle fa-stack-2x"></i>
+
+                                <i class="fab fa-telegram-plane fa-stack-1x fa-inverse"></i>
+                                </span>
+                                </a>
+                                
+                                <a href="https://www.linkedin.com/in/moneer-al-dakkak-2534511b3" target="_blank">
+                                
+                                <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                                </span>
+                                </a>
+                                
+                                <a href="https://www.instagram.com/iammoneer/" target="_blank">
+                                <span class="fa-stack">
+
+                                <i class="fas fa-circle fa-stack-2x"></i>
+
+                                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                                </a>
+                                
+                            </div>
+                            
+                            
                         </div>
     
                     </header>
@@ -58,7 +98,7 @@
                     <nav>
                         <h1>Welcome to my portfolio</h1>
                         <ul>
-                            <li id="about-me-screen">Who am I ?</li>
+                            <li id="me-screen">Who am I ?</li>
                             <li id="gallery-screen">Visit My Gallery &gt;</li>
                             <li id="services-screen">&lt; Look at My services</li>
                             
@@ -68,66 +108,65 @@
 
                 </div>
 
-            </section>
+            </section> 
+
+            <div class="tint-layer"></div>
+
         </div>
 
 
-        <div class="tint-layer"></div>
-        
-        
-        <!-- Gallery screen -->
-        
-        <section class="gallery">
+        <div class="second-of-two">
+
+
+            <section class="gallery">
             
-            <h2>Say Hello to my Gallery</h2>
+                <h2>Say Hello to my Gallery</h2>
+                
+                <h3>BlueMoonJs</h3>
+                <iframe src="https://moneeraldakkak.github.io/BlueMoonJs/"></iframe>
+                
+                <h3>Project 2</h3>
+                <iframe src=""></iframe>
+                
+                <h3>Project 3</h3>
+                <iframe src=""></iframe>
+                
+                <h3>Project 4</h3>
+                <iframe src=""></iframe>
+                
+                <h3>Project 5</h3>
+                <iframe src=""></iframe>
+                
+            </section>
             
-            <h3>BlueMoonJs</h3>
-            <iframe src="https://moneeraldakkak.github.io/BlueMoonJs/"></iframe>
+            <!-- services screen : -->
             
-            <h3>Project 2</h3>
-            <iframe src=""></iframe>
+            <section class="services">
+                <h2>My Services</h2>
             
-            <h3>Project 3</h3>
-            <iframe src=""></iframe>
-            
-            <h3>Project 4</h3>
-            <iframe src=""></iframe>
-            
-            <h3>Project 5</h3>
-            <iframe src=""></iframe>
-            
-        </section>
-        
-        <!-- services screen : -->
-        
-        <section class="services">
-            <h2>My Services</h2>
-        
-            <div style="">
-                <i class="fab fa-html5 fa-8x" style="float: left"></i>
-                <p style="float: left; text-align: left">
-                    <h3>jdjdkdkkwnsjsnsk</h3>
-                    jzjdksksnbdjdknejskndbrjkskwnajdkwnwbjs
-                </p>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            
-        </section>
-        
+                <div style="">
+                    <i class="fab fa-html5 fa-8x" style="float: left"></i>
+                    <p style="float: left; text-align: left">
+                        <h3>jdjdkdkkwnsjsnsk</h3>
+                        jzjdksksnbdjdknejskndbrjkskwnajdkwnwbjs
+                    </p>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </section>
+
+
+
+        </div>
+
+
     </main>
-    
-    
-    
-    
-    
-    
-    
-        
-        
+
     <script src="main.js"></script>
+
 </body>
 
 </html>
