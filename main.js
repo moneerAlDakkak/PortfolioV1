@@ -1,42 +1,34 @@
-setTimeout(function () {
+//main screen functions :
+
+document.querySelectorAll('nav ul li').forEach(sectionShow)
+
+function sectionShow(theSection) {
     
     'use strict';
     
-    document.querySelector('.follow').style.right = '30px';
-    
-},2000);
-
-
-
-
-
-document.querySelectorAll('nav ul li').forEach(screenChange);
-
-function screenChange(wantedScreen) {
-    
-    'use strict';
-    
-    wantedScreen.onclick = function () {
-        
-        document.body.classList = [this.getAttribute('id')]
-        
+    theSection.onclick = function () {
+        document.body.classList = [this.getAttribute('id')];
     }
     
-};
-
-
-
-document.querySelectorAll('.back-button').forEach(backFunction);
-
-
-function backFunction(aButton) {
     
-    'use strict';
-    
-    aButton.onclick = () => {
-        document.body.classList = [];
-    }
 }
+
+
+
+
+// back button function :
+
+
+document.querySelector('.back-button').onclick = function () {
+    
+    'use strict';
+
+    document.body.classList = [];
+
+}
+
+
+// Theme changer :
 
 
 document.querySelector('.logo').ondblclick = function () {
@@ -52,3 +44,13 @@ document.querySelector('.logo').ondblclick = function () {
     }
 
 }
+
+/*
+setTimeout(function () {
+    
+    'use strict';
+    
+    document.querySelector('.follow').style.right = '30px';
+    
+},2000);
+*/
