@@ -284,7 +284,7 @@ nav ul li {
 
 .about-me-screen .about-me-layer p {
     opacity: 1;
-    transform: translateY(320px)
+    transform: translateY(350px)
 }
 
 
@@ -379,4 +379,17 @@ section:not(.about-me-layer) h2 {
     border: 2px solid var(--textcolor);
     border-radius: 20px;
     margin: 30px auto;
+}
+
+
+@media (max-height: 380px) {
+
+    nav ul li {
+        width: 32%;
+    }
+
+    .about-me-screen .about-me-layer p {
+        transform: translateY(250px)
+    }
+
 }
