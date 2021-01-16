@@ -20,7 +20,7 @@ body {
 }
 
 #light-mode {
-    --maincolor: #fff;
+    --maincolor: white;
     --textcolor: #38464f;
     --accentcolor: #307ac3;
     --bgBackground: url("../images/tictac.png");
@@ -28,11 +28,11 @@ body {
 }
 
 #dark-mode {
-    --maincolor: #1b2c47;
-    --textcolor: #fff;
+    --maincolor: black;
+    --textcolor: #E0E0E0;
     --accentcolor: #ffe264;
     --bgBackground: url("../images/tictacdark.png");
-    --tintgradient:  linear-gradient(180deg, rgba(27,44,71,0.8295693277310925) 57%, rgba(27,44,71,0.5886729691876751) 100%); 
+    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7333356667029016) 52%, rgba(0,0,0,0.3273681213675914) 100%);
 }
 
 
@@ -61,6 +61,22 @@ main {
 }
 
 
+h6 {
+    display: none
+}
+
+
+.fa-1-5x {
+    font-size: 1.5em;
+}
+
+.fa-inverse {
+    color: var(--maincolor)
+}
+
+.fa-circle {
+    color: var(--textcolor);
+}
 
 
 
@@ -93,15 +109,6 @@ main {
     overflow: hidden;
 }
 
-
-h6 {
-    display: none
-}
-
-
-.fa-1-5x {
-    font-size: 1.5em;
-}
 
 
 /* 3) color tinted layer :
@@ -411,6 +418,7 @@ section:not(.me-layer) h2 {
     border-radius: 50%;
     border: 5px solid var(--textcolor);
     padding: 15px;
+    
 }
 
 .me-layer > p {
