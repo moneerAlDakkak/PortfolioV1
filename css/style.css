@@ -129,7 +129,7 @@ h6 {
     z-index: 2;
     position: relative;
     width: 100%;
-    margin-bottom: 8vh;
+    margin-bottom: 10vh;
     transition: all 2s ease-out
 }
 
@@ -398,7 +398,7 @@ section:not(.me-layer) h2 {
 
 .fixed-img {
     position: fixed;
-    top: 20vh;
+    top: 10vh;
     width: 100%;
     display: flex;
     transition: all 2s linear
