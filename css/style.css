@@ -184,7 +184,7 @@ header .content {
     margin-left: 20px;
     height: fit-content;
     width: 160px;
-    font: bold 1.6em/1em rancho, cursive;
+    font: bold 1.6em/1em rancho, Arial;
     cursor: pointer;
     transform: translateY(3px)
 }
@@ -193,7 +193,7 @@ header .content {
     content: 'M';
     display: inline-block;
     border-radius: 10px;
-    font: bold 1.2em/54px rancho, cursive;
+    font: bold 1.2em/54px rancho, Arial;
     padding: 0 12px;
     color: var(--maincolor);
     background-color: var(--accentcolor);
@@ -209,7 +209,7 @@ header .content {
     display: inline-block;
     margin-left: 8px;
     color: var(--accentcolor);
-    font: bold 1.7em/1em rancho, cursive;
+    font: bold 1.7em/1em rancho, Arial;
 }
 
 .restName span {
@@ -221,7 +221,7 @@ header .content {
     position: absolute;
     top: 28px;
     left: 48px;
-    font: bold .8em/1em rancho, cursive;
+    font: bold .8em/1em rancho, Arial;
     white-space: nowrap;
 }
 
