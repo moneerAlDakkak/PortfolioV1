@@ -428,7 +428,7 @@ section:not(.me-layer) h2 {
     text-align: center;
     font: bold 1.2em/1.5em poppins;
     opacity: 0;
-    text-shadow: -1px 1px 1px var(--maincolor);(
+    text-shadow: -1px 1px 1px var(--maincolor);
     transition: bottom 2s ease-out,
                 opacity 2s ease-in-out;
 }
