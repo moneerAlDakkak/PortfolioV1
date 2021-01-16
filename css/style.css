@@ -136,7 +136,7 @@ h6 {
     z-index: 2;
     position: relative;
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
     transition: all 2s ease-out
 }
 
@@ -418,15 +418,15 @@ section:not(.me-layer) h2 {
 
 
 
-.fixed-img {
-    position: fixed;
-    top: 15vh;
+.absolute-img {
+    position: absolute;
+    top: 10vh;
     width: 100%;
     display: flex;
     transition: all 2s linear
 }
 
-.fixed-img img {
+.absolute-img img {
     height: 45vh;
     min-height: 250px;
     margin: 0 auto;
@@ -437,7 +437,7 @@ section:not(.me-layer) h2 {
 }
 
 .me-layer > p {
-    position: fixed;
+    position: absolute;
     bottom: 45%;
     width: 100%;
     margin: 0 auto;
