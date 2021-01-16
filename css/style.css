@@ -32,9 +32,8 @@ body {
     --textcolor: #E0E0E0;
     --accentcolor: #ffe264;
     --bgBackground: url("../images/tictacdark.png");
-    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7333356667029016) 52%, rgba(0,0,0,0.3273681213675914) 100%);
+    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7862879899296448) 49%, rgba(0,0,0,0.35560928121970514) 100%);
 }
-
 
 h1 {
     text-align: center;
