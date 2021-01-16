@@ -45,12 +45,14 @@ document.querySelector('.logo').ondblclick = function () {
 
 }
 
-/*
-setTimeout(function () {
-    
-    'use strict';
-    
-    document.querySelector('.follow').style.right = '30px';
-    
-},2000);
-*/
+function loading() {
+
+  'use strict';
+
+  document.getElementById('loading').style.zIndex = '-2';
+
+  document.getElementById('loading').style.opacity = '0';
+
+}
+
+setTimeout(loading, 10000);
