@@ -23,7 +23,7 @@ body {
     --maincolor: #fff;
     --textcolor: #38464f;
     --accentcolor: #307ac3;
-    --bgBackground: url("../images/tictac.png");
+    --bgBackground: url("../images/tictacu.png");
     --tintgradient:  linear-gradient(180deg, rgba(255,255,255,0.9248074229691877) 53%, rgba(255,255,255,0.8323704481792717) 100%);
 }
 
