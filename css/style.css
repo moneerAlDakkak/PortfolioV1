@@ -398,7 +398,7 @@ section:not(.me-layer) h2 {
 
 .fixed-img {
     position: fixed;
-    top: 15vh;
+    top: 20vh;
     width: 100%;
     display: flex;
     transition: all 2s linear
