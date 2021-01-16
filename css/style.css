@@ -32,8 +32,9 @@ body {
     --textcolor: #E0E0E0;
     --accentcolor: #ffe264;
     --bgBackground: url("../images/tictacdark.png");
-    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7862879899296448) 49%, rgba(0,0,0,0.35560928121970514) 100%);
+    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7333356667029016) 52%, rgba(0,0,0,0.3273681213675914) 100%);
 }
+
 
 h1 {
     text-align: center;
@@ -375,13 +376,28 @@ section:not(.me-layer) h2 {
 
 .services div {
     width: 90%;
-    height: 150px;
-    border: 2px solid var(--textcolor);
     border-radius: 20px;
-    margin: 30px auto;
+    margin: 50px auto;
+    text-align: left;
+    overflow: hidden
 }
 
+.services div i {
+    float: left;
+    margin: auto 30px auto 10px;
+    line-height: 1.3em;
+}
 
+.services div p {
+    float: left;
+    max-width: 60%;
+}
+
+.services div p span {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block
+}
 
 /*to look at*/
 
