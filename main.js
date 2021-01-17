@@ -55,4 +55,4 @@ function loading() {
 
 }
 
-setTimeout(loading, 4000);
+setTimeout(loading, 2000);
