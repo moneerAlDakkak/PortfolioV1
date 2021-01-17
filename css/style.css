@@ -52,16 +52,6 @@ main {
     overflow: auto;
 }
 
-@font-face {
-    font-family: poppins;
-    src: url('../fonts/poppins.ttf')
-}
-
-@font-face {
-    font-family: rancho;
-    src: url('../fonts/rancho.ttf')
-}
-
 
 h6 {
     display: none
