@@ -143,29 +143,9 @@ header {
     position: relative;
     margin: 20px auto;
     overflow: hidden;
+    backdrop-filter: blur(4px);
     box-shadow: -1px 2px 4px 1px var(--shadowcolor);
 }
-
-
-header .blured {
-    background: var(--bgBackground) center center repeat;
-    filter: blur(4px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-header .content {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 
 
 .logo {
