@@ -21,6 +21,7 @@ body {
 
 #light-mode {
     --maincolor: white;
+    --headertint: rgba(255,255,255,.4);
     --textcolor: #38464f;
     --shadowcolor: #23232361;
     --accentcolor: #307ac3;
@@ -30,6 +31,7 @@ body {
 
 #dark-mode {
     --maincolor: black;
+    --headertint: rgba(0,0,0,.4);
     --textcolor: #E0E0E0;
     --shadowcolor: #D9D9D982;
     --accentcolor: #ffe264;
@@ -143,7 +145,8 @@ header {
     position: relative;
     margin: 20px auto;
     overflow: hidden;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
+    background-color: var(--headertint);
     box-shadow: -1px 2px 4px 1px var(--shadowcolor);
 }
 
@@ -205,7 +208,7 @@ header {
 }
 
 .follow span {
-    margin-left: 10px;
+    margin-left: 2px;
     cursor: pointer;
 }
 
@@ -399,12 +402,13 @@ section:not(.me-layer) h2 {
 }
 
 .absolute-img img {
-    height: 45vh;
+    height: 80vh;
     min-height: 250px;
+    max-height: 80vw;
     margin: 0 auto;
     border-radius: 50%;
     border: 5px solid var(--textcolor);
-    padding: 15px;
+    padding: 10px;
     
 }
 
@@ -416,14 +420,14 @@ section:not(.me-layer) h2 {
     text-align: center;
     font: bold 1.2em/1.5em poppins;
     opacity: 0;
-    text-shadow: -1px 1px 1px var(--maincolor);
+    text-shadow: -1px 1px 2px var(--maincolor);
     transition: bottom 2s ease-out,
                 opacity 2s ease-in-out;
 }
 
 .me-screen .me-layer p {
     opacity: 1;
-    bottom: 20%
+    bottom: 15%
 }
 
 
