@@ -141,7 +141,8 @@ header {
     max-width: 500px;
     border-radius: 80px;
     height: 80px;
-    line-height: 85px;
+    display: flex;
+    flex-flow: column wrap;
     position: relative;
     margin: 20px auto;
     overflow: hidden;
@@ -152,59 +153,48 @@ header {
 
 
 .logo {
-    display: inline-block;
     position: relative;
-    top: 0;
-    left: 10px;
-    margin-left: 20px;
-    height: fit-content;
-    width: 160px;
-    font: bold 1.6em/1em rancho, Arial;
+    left: 30px;
+    display: inline-grid;
+    width: fit-content;
+    margin: auto 0;
+    font: bold 24px/1em rancho, cursive;
     cursor: pointer;
-    transform: translateY(3px)
+    grid-row-gap: 10px;
+    grid-template-columns: 42px 4px 70px;
+    grid-template-rows: repeat(2, 20px);
+    grid-template-areas:
+        "M . rest"
+        "M . laast";
 }
 
 .logo:before {
+    grid-area: M;
     content: 'M';
-    display: inline-block;
     border-radius: 10px;
-    font: bold 1.2em/54px rancho, Arial;
-    padding: 0 12px;
+    font: bold 26px/50px rancho, cursive;
+    text-align: center;
     color: var(--maincolor);
     background-color: var(--accentcolor);
 }
 
 .restName {
+    grid-area: rest;
     display: inline-block;
-    position: absolute;
-    top: -8px;
-    left: 40px;
-    height: 36px;
-    width: 80px;
-    display: inline-block;
-    margin-left: 8px;
     color: var(--accentcolor);
-    font: bold 1.7em/1em rancho, Arial;
-}
-
-.restName span {
-    position: absolute;
+    font: bold 36px/76% rancho, cursive;
 }
 
 .lastName {
+    grid-area: laast;
     display: inline-block;
-    position: absolute;
-    top: 28px;
-    left: 48px;
-    font: bold .8em/1em rancho, Arial;
+    font: bold 18px/70% rancho, cursive;
     white-space: nowrap;
 }
 
 .follow {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    transition: right 4s ease-out
+    align-self: flex-end;
+    margin: auto 20px;
 }
 
 .follow span {
