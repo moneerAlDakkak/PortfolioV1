@@ -341,21 +341,20 @@ section:not(.me-layer) h2 {
 
 .services div {
     width: 90%;
-    border-radius: 20px;
-    margin: 50px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 40px auto;
     text-align: left;
     overflow: hidden;
 }
 
 .services div i {
-    float: left;
     margin: auto 30px auto 10px;
     line-height: 1.3em;
 }
 
 .services div p {
-    float: left;
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .services div p span {
