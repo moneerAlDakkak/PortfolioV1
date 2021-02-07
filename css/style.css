@@ -344,7 +344,8 @@ section:not(.me-layer) h2 {
     border-radius: 20px;
     margin: 50px auto;
     text-align: left;
-    overflow: hidden
+    overflow: hidden;
+    white-space: nowrap
 }
 
 .services div i {
