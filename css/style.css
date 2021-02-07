@@ -345,7 +345,6 @@ section:not(.me-layer) h2 {
     margin: 50px auto;
     text-align: left;
     overflow: hidden;
-    white-space: nowrap
 }
 
 .services div i {
