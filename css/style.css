@@ -417,8 +417,7 @@ section:last-of-type {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(222, 236, 236);
-    background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
+    background-color: var(--card);
     transition: opacity 1s ease
 }
 
