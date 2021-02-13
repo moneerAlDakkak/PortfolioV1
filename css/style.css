@@ -1,140 +1,124 @@
-/* 1) general theming :
-*/
-
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-
 body {
-    background: var(--bgBackground) center center repeat;
-    margin: 0;
-    padding: 0;
-    max-height: 100vh;
-    height: 100vh;
-    max-width: 100vw;
     color: var(--textcolor);
-    font-family: poppins;
-    overflow: auto;
-    transition: background 2s ease-out;
+  max-height: 100vh;
+  height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+  overflow: hidden;
+  background: var(--bgBackground) center center repeat;
+  
 }
 
 #light-mode {
     --maincolor: white;
-    --headertint: rgba(255,255,255,.4);
+    --mainX: black ;
     --textcolor: #38464f;
-    --shadowcolor: #23232361;
+    --shadowcolor: rgba(0,0,0,.3);
     --accentcolor: #307ac3;
     --bgBackground: url("../images/tictac.png");
-    --tintgradient:  linear-gradient(180deg, rgba(255,255,255,0.9248074229691877) 53%, rgba(255,255,255,0.8323704481792717) 100%);
+    --theGradient: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .7) 70%, rgba(255, 255, 255, 0) 94%);
+    --gold: var(--accentcolor)
 }
 
 #dark-mode {
     --maincolor: black;
-    --headertint: rgba(0,0,0,.4);
-    --textcolor: #E0E0E0;
-    --shadowcolor: #D9D9D982;
-    --accentcolor: #ffe264;
+    --mainX: white;
+    --textcolor: #D1D1D1;
+    --shadowcolor: rgba(255,255,255,.3);
+    --accentcolor: #DAC076;
     --bgBackground: url("../images/tictacdark.png");
-    --tintgradient:  linear-gradient(180deg, rgba(0,0,0,0.7333356667029016) 52%, rgba(0,0,0,0.3273681213675914) 100%);
-}
-
-
-h1 {
-    text-align: center;
-}
-
-main {
-    position: relative;
-    width: 100%;
-    min-width: 400px;
-    max-width: 1000px;
-    height:  100%;
-    margin: auto auto ;
-    overflow: auto;
-}
-
-
-h6 {
-    display: none
-}
-
-
-.fa-1-5x {
-    font-size: 1.5em;
+    --theGradient: radial-gradient(circle, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 70%, rgba(0, 0, 0, 0) 94%);
+    --gold: linear-gradient(140deg, rgba(255,234,189,0.9999816024696434) 0%, rgba(218,191,119,.8) 42%, rgba(93,74,31,.8) 100%)
 }
 
 .fa-inverse {
-    color: var(--maincolor)
+    color: var(--maincolor) !important
 }
 
 .fa-circle {
-    color: var(--textcolor);
+    color: var(--textcolor)
 }
 
 
-
-
-/* 2) About Me screen :
-*/
-
-.first-of-two {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden
 }
 
-.second-of-two {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+.to-gallery .container {
     overflow-y: auto;
 }
 
-
-.me-layer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content:  flex-end;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+main {
+  width: 300%;
+  height: 100%;
+  display: grid;
+  grid-template-rows : 100%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-areas: 
+  'gallery me services';
+  transform: translateX(-33.3%);
+  transition: transform 1s Ease;
 }
 
 
-
-/* 3) color tinted layer :
+/* Me page :
 */
-
-
-.tint-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--tintgradient);
-    opacity: .7;
-    transition: all 2s ease-out
+.me-screen {
+  grid-area: me;
+  position: relative;
 }
 
+.main-figure {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.main-figure img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 8px solid var(--textcolor);
+  padding: 10px;
+  border-radius: 50%;
+}
 
-
-/* 4) The layer that holds all items :
-*/
+.main-figure figcaption {
+  text-align: center;
+  font: bold 1.2em/1.5em poppins;
+  opacity: 0;
+  text-shadow: -1px 1px 2px var(--maincolor);
+  transition: bottom 2s Ease,
+  opacity 2s ease-in-out;
+}
 
 .items-layer {
-    z-index: 2;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-bottom: 12vh;
-    transition: all 2s ease-out
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    margin: 30% auto;
+    background: var(--theGradient);
+    transition: all 1s Ease
 }
-
-
 
 header {
     width: 90%;
@@ -144,7 +128,7 @@ header {
     display: flex;
     flex-flow: column wrap;
     position: relative;
-    margin: 20px auto;
+    margin: 0px auto 8px auto;
     overflow: hidden;
     backdrop-filter: blur(3px);
     background-color: var(--headertint);
@@ -175,7 +159,8 @@ header {
     font: bold 26px/50px rancho, cursive;
     text-align: center;
     color: var(--maincolor);
-    background-color: var(--accentcolor);
+    background: #307ac3;
+    background: var(--gold)
 }
 
 .restName {
@@ -211,6 +196,11 @@ a {
 /* 5) navigation to screens :
 */
 
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
 
 nav ul {
     list-style: none;
@@ -224,300 +214,189 @@ nav ul li {
     display: inline-block;
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
+    padding: 8px;
     border: 2px solid var(--textcolor);
     border-radius: 80px;
     text-align: center;
     font-weight: bold;
     cursor: pointer
 }
-    
 
-
-
-
-
-/* 7) the back button :
+/* Gallery page :
 */
 
+section:nth-of-type(2) {
+    grid-area: gallery;
+    text-align: center;
+    position: relative
+}
+
+h2 {
+    text-align: center;
+    margin: 28px 0;
+}
+
+.gallery-screen h3 {
+    color: var(--accentcolor)
+}
+
+.gallery-screen article {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 30px auto 30px;
+    overflow: hidden;
+}
+
+.gallery-screen article iframe, .gallery-screen article div {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+.gallery-screen article div  {
+    z-index: 2;
+    background-color: white;
+    transition:  1s ease
+}
+
+.gallery-screen article div p {
+    width: 70%;
+    margin: 20px auto
+}
+
+.gallery-screen article div button {
+    border: none;
+    outline: none;
+    font-family: poppins;
+    font-weight: bold;
+    background-color: var(--accentcolor);
+    color: var(--maincolor);
+    padding: 14px;
+    border-radius: 15px;
+}
+
+section:last-of-type {
+    position: relative;
+    grid-area: services
+}
+
+
+
+/* Control center :
+*/
+
+.to-me .items-layer {
+    bottom: -100%;
+}
+
+.to-me figcaption {
+    opacity: 1
+}
+
+.to-gallery main {
+    transform: translateX(0)
+}
+
+.to-services main {
+    transform: translateX(-66.6%)
+}
+
+
+/* back buttons :
+*/
 
 .back-button {
-    z-index: 4;
+    position: fixed;
+    z-index: 2;
     width: 30px;
     height: 30px;
     background-color: var(--accentcolor);
     color: var(--maincolor);
     border-radius: 50%;
-    position: absolute;
-    top: 30px;
-    left: -90px;
+    top: -30px;
+    left: 20px;
     font-weight: bold;
     font-family: poppins;
     border: none;
     outline: none;
-    transition: left 2s ease-out
+    transition: top 1s Ease
 }
 
-.me-screen .back-button, .gallery-screen .back-button, .services-screen .back-button {
-    left: 30px;
-}
-
-
-
-
-
-
-
-/* 6) Screens classes :
-*/
-
-.me-screen .tint-layer, .me-screen .items-layer {
-    opacity: 0;
-    z-index: 0;
-    transform: translateY(100%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 8) Gallery and services screens :
-*/
-
-section:not(.me-layer) {
-    z-index: 3;
+.back-iframe {
+    z-index: 1;
     position: absolute;
     top: 0;
-    width: 100%;
-    min-height: 100%;
-    background: var(--bgBackground) center center repeat;
-    text-align: center;
-    overflow: auto;
-    transition: left 2s ease-in-out,
-                right 2s ease-in-out
-}
-
-.gallery {
-    left: -100%;
-}
-
-.services {
-    right: -100%;
-}
-
-.gallery-screen .gallery {
     left: 0;
+    border-radius: 0;
+    font-weight: bold;
+    font-family: poppins;
+    width: 40px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: var(--accentcolor);
+    color: var(--maincolor);
 }
 
-.services-screen .services {
-    right: 0;
+.to-me .back-button, .to-gallery .back-button, .to-services .back-button {
+    top: 30px;
 }
 
-section:not(.me-layer) h2 {
-    margin: 30px;
+
+/* Services screen :
+*/
+
+.services-screen h2 {
+    text-align: center;
 }
 
-.gallery h3 {
-    color: var(--accentcolor)
-}
-
-.gallery iframe {
-    width: 90%;
-    height: 300px;
-    border-radius: 15px;
-    margin-bottom: 30px
-}
-
-.services div {
-    width: 90%;
+.services-screen div {
+    width: 100%;
+    padding-left: 6%;
     display: flex;
     flex-flow: row nowrap;
-    margin: 40px auto;
-    text-align: left;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
-.services div i {
-    margin: auto 30px auto 10px;
+
+.services-screen div i {
+    width: 30%;
+    margin: auto 10% auto 10px;
     line-height: 1.3em;
 }
 
-.services div p {
+.services-screen div p {
     max-width: 50%;
 }
 
-.services div p span {
+.services-screen div p span {
     font-weight: bold;
     font-size: 1.5em;
     display: block
 }
 
-/*to look at*/
-
-
+#theme {
+    z-index: 3;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accentcolor);
+    background-color: var(--maincolor);
+}
 
 @media (max-height: 380px) {
-
-    nav ul li {
-        width: 32%;
+    
+    .items-layer {
+        justify-content: center;
+        margin: 0
     }
-
-    .me-screen .about-me-layer p {
-        transform: translateY(300%)
-    }
-
 }
-
-
-
-
-.absolute-img {
-    position: absolute;
-    top: 10vh;
-    width: 100%;
-    display: flex;
-    transition: all 2s linear
-}
-
-.absolute-img img {
-    height: 80vh;
-    min-height: 250px;
-    max-height: 80vw;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 5px solid var(--textcolor);
-    padding: 10px;
-    
-}
-
-.me-layer > p {
-    position: absolute;
-    bottom: 45%;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font: bold 1.2em/1.5em poppins;
-    opacity: 0;
-    text-shadow: -1px 1px 2px var(--maincolor);
-    transition: bottom 2s ease-out,
-                opacity 2s ease-in-out;
-}
-
-.me-screen .me-layer p {
-    opacity: 1;
-    bottom: 15%
-}
-
-
-/* Loading screen:
-*/
-
-#loading {
-    z-index: 5;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(222, 236, 236);
-    background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
-    transition: opacity 1s ease
-}
-
-#loading > div {
-    width: fit-content;
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.first-ring, .second-ring, .third-ring {
-    position: fixed;
-    left: calc(50vw - 70px); /*50vw - width/2 */
-    top: calc(50vh - 100px); /*50vh - (width/2 + 30px)*/
-    border-radius: 50%;
-}
-
-.first-ring {
-    width: 140px;
-    height: 140px;
-    animation: rotate2 2s infinite linear;
-    box-shadow: 0 0 2px 2px var(--accentcolor);
-}
-
-.second-ring {
-    width: 140px;
-    height: 140px;
-    animation: rotate1 2s infinite linear;
-    box-shadow: 0 0 2px 2px var(--accentcolor);
-}
-
-.third-ring {
-    width: 140px;
-    height: 140px;
-    animation: rotate3 2s infinite linear;
-    box-shadow: 0 0 2px 2px var(--accentcolor);
-}
-
-
-@keyframes rotate1 {
-    
-  0% {
-    transform: rotate3d(0);
-  }
-  
-  50% {
-    transform: rotate3d(180, 180, 180, 180deg);
-  }
-  
-  100% {
-      transform: rotate3d(360, 360, 360, 360deg);
-  }
-  
-}
-
-@keyframes rotate2 {
-    
-  0% {
-    transform: rotate3d(0);
-  }
-  
-  50% {
-    transform: rotate3d(180, 180, 180, -180deg);
-  }
-  
-  100% {
-    transform: rotate3d(360, 360, 360, -360deg);
-  }
-  
-  
-}
-
-@keyframes rotate3 {
-    
-  0% {
-      transform: rotate3d(0);
-  }
-  
-  50% {
-      transform: rotate3d(-180, 180, -180, 180deg);
-  }
-  
-  100% {
-      transform: rotate3d(-360, 360, -360, 360deg);
-  }
-  
-}
-
