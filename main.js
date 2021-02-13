@@ -41,3 +41,11 @@ document.querySelectorAll('.back-iframe').forEach((l)=>{
         this.parentElement.lastElementChild.style.transform = 'translateX(0)'
     }
 });
+
+window.addEventListener('load',_=> {
+    
+    document.getElementById('loading').style.zIndex = '-2';
+    
+    document.getElementById('loading').style.opacity = '0';
+    
+});
