@@ -1,58 +1,43 @@
-//main screen functions :
+document.getElementById('theme').onclick =_=> {
 
-document.querySelectorAll('nav ul li').forEach(sectionShow)
+    if (document.body.getAttribute('id') === 'light-mode') {
 
-function sectionShow(theSection) {
-    
-    'use strict';
-    
-    theSection.onclick = function () {
-        document.body.classList = [this.getAttribute('id')];
-    }
-    
-    
-}
+        document.body.setAttribute('id', 'dark-mode')
 
+    } else if (document.body.getAttribute('id') === 'dark-mode') {
 
-
-
-// back button function :
-
-
-document.querySelector('.back-button').onclick = function () {
-    
-    'use strict';
-
-    document.body.classList = [];
-
-}
-
-
-// Theme changer :
-
-
-document.querySelector('.logo').ondblclick = function () {
-
-    if (document.body.getAttribute('id') == 'light-mode') {
-
-        document.body.setAttribute('id', 'dark-mode');
-
-    } else if (document.body.getAttribute('id') == 'dark-mode') {
-
-        document.body.setAttribute('id', 'light-mode');
+        document.body.setAttribute('id', 'light-mode')
 
     }
 
-}
-
-function loading() {
-
-  'use strict';
-
-  document.getElementById('loading').style.zIndex = '-2';
-
-  document.getElementById('loading').style.opacity = '0';
 
 }
 
-setTimeout(loading, 2000);
+document.querySelectorAll('nav ul li').forEach(function (f) {
+    
+    f.onclick = function () {
+        
+        document.querySelector('body').classList.add('to-' + this.getAttribute('id'));
+        
+        document.querySelector('.container').style.height = document.getElementById(this.getAttribute('id') + '-screen').style.height
+        
+    }
+    
+    
+});
+
+document.querySelector('.back-button').onclick =_=> {
+    document.body.classList = ''
+};
+
+document.querySelectorAll('article div button').forEach((s) => {
+    s.onclick = function () {
+        this.parentElement.style.transform = 'translateX(-100%)'
+    }
+});
+
+document.querySelectorAll('.back-iframe').forEach((l)=>{
+    l.onclick = function () {
+        this.parentElement.lastElementChild.style.transform = 'translateX(0)'
+    }
+});
