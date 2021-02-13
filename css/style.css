@@ -18,7 +18,7 @@ body {
 
 #light-mode {
     --maincolor: white;
-    --mainX: black ;
+    --card: #D3E3EF;
     --textcolor: #38464f;
     --shadowcolor: rgba(0,0,0,.3);
     --accentcolor: #307ac3;
@@ -29,7 +29,7 @@ body {
 
 #dark-mode {
     --maincolor: black;
-    --mainX: white;
+    --card: #2A2A2A;
     --textcolor: #D1D1D1;
     --shadowcolor: rgba(255,255,255,.3);
     --accentcolor: #DAC076;
@@ -260,7 +260,7 @@ h2 {
 
 .gallery-screen article div  {
     z-index: 2;
-    background-color: white;
+    background-color: var(--card);
     transition:  1s ease
 }
 
@@ -398,5 +398,13 @@ section:last-of-type {
     .items-layer {
         justify-content: center;
         margin: 0
+    }
+
+    nav ul li {
+        margin: 6px;
+    }
+    
+    h1 {
+        margin: 6px;
     }
 }
