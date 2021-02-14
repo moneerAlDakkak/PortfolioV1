@@ -23,7 +23,7 @@ body {
     --shadowcolor: rgba(0,0,0,.3);
     --accentcolor: #307ac3;
     --bgBackground: url("../images/tictac.png");
-    --theGradient: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .7) 70%, rgba(255, 255, 255, 0) 94%);
+    --theGradient: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .5) 70%, rgba(255, 255, 255, 0) 100%);
     --gold: var(--accentcolor)
 }
 
@@ -34,8 +34,8 @@ body {
     --shadowcolor: rgba(255,255,255,.3);
     --accentcolor: #DAC076;
     --bgBackground: url("../images/tictacdark.png");
-    --theGradient: radial-gradient(circle, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 70%, rgba(0, 0, 0, 0) 94%);
-    --gold: linear-gradient(140deg, rgba(255,234,189,0.9999816024696434) 0%, rgba(218,191,119,.8) 42%, rgba(93,74,31,.8) 100%)
+    --theGradient: radial-gradient(circle, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 70%, rgba(0, 0, 0, 0) 100%);
+    --gold: linear-gradient(140deg, rgba(255, 234, 189, 0.9999816024696434) 0%, rgba(218, 191, 119, 1) 42%, rgba(93, 74, 31, 1) 90%);
 }
 
 .fa-inverse {
@@ -109,9 +109,9 @@ main {
 
 .items-layer {
     position: absolute;
-    top: 0;
+    top: -20%;
     width: 100%;
-    height: 100%;
+    height: 120%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
