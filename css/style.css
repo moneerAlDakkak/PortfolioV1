@@ -56,7 +56,7 @@ body {
   overflow: hidden
 }
 
-.to-gallery .container {
+.to-gallery .container, .to-services .container {
     overflow-y: auto;
 }
 
@@ -91,8 +91,8 @@ main {
 }
 
 .main-figure img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
   border: 8px solid var(--textcolor);
   padding: 10px;
   border-radius: 50%;
@@ -109,13 +109,13 @@ main {
 
 .items-layer {
     position: absolute;
-    bottom: 20px;
+    top: 0;
     width: 100%;
     height: 100%;
-    overflow: visible;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     background: var(--theGradient);
     transition: all 1s Ease
@@ -292,7 +292,7 @@ section:last-of-type {
 */
 
 .to-me .items-layer {
-    bottom: -100%;
+    top: 100%;
 }
 
 .to-me figcaption {
@@ -396,9 +396,9 @@ section:last-of-type {
 
 @media (max-height: 380px) {
     
-    .items-layer {
+    header, nav, h1 {
         justify-content: center;
-        margin: 0
+        margin: 0;
         transform: scale(.9)
     }
 
@@ -414,7 +414,7 @@ section:last-of-type {
 @media (min-height: 180vw) {
 
     .items-layer {
-        bottom: 24%
+        transform: translateY(16%)
     }
 
 }
@@ -517,3 +517,10 @@ section:last-of-type {
 }
 
 
+.services-screen, .gallery-screen, .me-screen {
+    display: none;
+}
+
+.show {
+    display: block
+}
