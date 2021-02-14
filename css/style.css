@@ -411,10 +411,10 @@ section:last-of-type {
     }
 }
 
-@media (min-height: 200vw) {
+@media (min-height: 180vw) {
 
     .items-layer {
-        margin-bottom: 26%
+        margin-bottom: 24%
     }
 
 }
