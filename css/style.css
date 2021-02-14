@@ -414,7 +414,7 @@ section:last-of-type {
 @media (min-height: 180vw) {
 
     .items-layer {
-        margin-bottom: 24%
+        bottom: 24%
     }
 
 }
