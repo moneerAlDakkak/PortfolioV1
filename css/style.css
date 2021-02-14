@@ -116,7 +116,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    margin: 30% auto;
+    margin: 0 auto;
     background: var(--theGradient);
     transition: all 1s Ease
 }
